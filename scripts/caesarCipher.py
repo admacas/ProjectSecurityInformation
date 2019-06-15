@@ -1,11 +1,15 @@
 def caesarCipher(ciphertext):
     listAlphabet=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
     result=''
-    for letter in ciphertext.upper():
-        indice= listAlphabet.index(letter)
-        result+=listAlphabet[indice-3]
+    for frase in ciphertext.split(' '):
+        for letter in frase.upper():
+            if letter not in listAlphabet:
+                result+=letter
+            else:
+                result+=listAlphabet[listAlphabet.index(letter)-3]
+        result+=' '
     return result
-resu=caesarCipher('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+resu=caesarCipher('FDUOD, ZKB ZRQ\'W BRX FDOO PH?')
 print(resu)
 
 
