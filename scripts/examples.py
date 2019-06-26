@@ -17,3 +17,12 @@ print('****** COMBINED CIPHER EXAMPLE ******')
 print('16-19-12-12-9 1-9-6-12-20')
 print('DECRIPTED: ', combinendCipher('16-19-12-12-9 1-9-6-12-20') + '\n\n')
 
+
+print('****** NUMBER CODES EXAMPLES ******')
+print('[1)14] [2)5,24 3)3] [5)7,9]')
+print('DECRIPTED: ', numberCodes('[1)14] [2)5,24 3)3] [5)7,9]', episodes_cripts) + '\n\n')
+print('[13)8,9,10] [14,17,22')
+print('DECRIPTED: ', numberCodes('[13)8,9,10] [14,17,22', episodes_cripts) + '\n\n')
+print('11)4,12,18] [12)8,9][17,18]')
+print('DECRIPTED: ', numberCodes('11)4,12,18] [12)8,9] [17,18]', episodes_cripts) + '\n\n')
+
