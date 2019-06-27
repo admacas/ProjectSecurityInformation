@@ -131,7 +131,7 @@ def vigenere_enc(plaintext, key):
             result += letter
     return result
 
-def vigenere_dec(ciphertext, key):
+def vigenere(ciphertext, key):
     result = ''
     i = 0
     for letter in ciphertext.upper():
