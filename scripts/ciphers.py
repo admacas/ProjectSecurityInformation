@@ -117,3 +117,29 @@ def numberCodes(criptedtext, key):
                 decrypted_message = decrypted_message + cryptogram[int(char_number) - 1]
 
     return decrypted_message
+
+
+def vigenere_enc(plaintext, key):
+    result = ''
+    i = 0
+    for letter in plaintext.upper():    
+        if (ord(letter) >= 65 and ord(letter) <= 90):
+            k = key.upper()[i%len(key)]
+            i += 1    	
+            result += chr((ord(letter)-65+ord(k)-65)%26+65)
+        else:
+            result += letter
+    return result
+
+def vigenere_dec(ciphertext, key):
+    result = ''
+    i = 0
+    for letter in ciphertext.upper():
+        if (ord(letter) >= 65 and ord(letter) <= 90):
+            k = key.upper()[i%len(key)]
+            i += 1
+            subs = ord(letter)%65-ord(k)%65
+            result += chr(subs + (26 if subs<0 else 0) + 65)
+        else:
+            result += letter
+    return result
